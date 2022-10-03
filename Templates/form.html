@@ -1,0 +1,88 @@
+<!DOCTYPE html>  
+<html lang="en">   
+<head>
+  <title> WDE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://m...content-available-to-author-only...n.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+</head>  
+<body>  
+  <div class="container">  
+  
+      <form action="{{ url_for("gfg")}}" method="post">
+        
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select id="gender" name="Gender">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="married">Married:</label>
+          <select id="married" name="Married">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dependents">Dependents:</label>
+              <select  id="dependents" name="Dependents" >
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">+3</option>
+              </select>
+        </div>
+        <div class="form-group">
+          <label for="education">Education:</label>
+          <select  id="education" name="Education" >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="employed_self">Employed_Self:</label>
+          <select id="employed_self" name="Employed_Self">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+        </div>
+        <div class="form-group">
+          <label for="applicantIncome">ApplicantIncome:</label>
+          <input type="text" id="applicantIncome" name="ApplicantIncome" >
+        </div>
+  
+        <div class="form-group">
+          <label for="coapplicantIncome">CoapplicantIncome:</label>
+          <input type="text" id="coapplicantIncome" name="CoapplicantIncome">
+  
+        </div>
+        <div class="form-group">
+          <label for="loanAmount">LoanAmount:</label>
+          <input type="text" id="loanAmount" name="LoanAmount" >
+  
+        </div>
+        <div class="form-group">
+          <label for="loan_Amount_Term">Loan_Amount_Term:</label>
+          <input type="text" id="loan_Amount_Term" name="Loan_Amount_Term" >
+  
+        </div>
+        <div class="form-group">
+          <label for="history_Credit">History_Credit:</label>
+        <input type="text" id="history_Credit" name="History_Credit" >
+  
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+  
+      </form>
+      
+  </div>  
+    
+    <script src="https://a...content-available-to-author-only...s.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+    <script src="https://m...content-available-to-author-only...n.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  </body>  
+</html>  
+
+
