@@ -54,7 +54,7 @@ def predictResult_DecisionTree(X_train, y_train):
     DecisionTree = DecisionTreeClassifier()
     DecisionTree.fit(X_train, y_train)
     global DTfilename
-    DTfilename = 'DecisionTree_model.pkl'  # .sav?
+    DTfilename = 'DecisionTree_model.pkl' 
     pickle.dump(DecisionTree, open(DTfilename, 'wb'))
     # y=DecisionTree.predict(X)
     # if y==0 :return "DecisionTree: NO"
@@ -65,7 +65,7 @@ def predictResult_naivebayes(X_train, y_train):
     naivebayes = GaussianNB()
     naivebayes.fit(X_train, y_train)
     global GBfilename
-    GBfilename = 'naivebayes_model.pkl'  # .sav?
+    GBfilename = 'naivebayes_model.pkl'  
     pickle.dump(naivebayes, open(GBfilename, 'wb'))
     # y=naivebayes.predict(X)
     # if y==0 :return "naivebayes: NO"
@@ -76,7 +76,7 @@ def predictResult_Logistic_Regression(X_train, y_train):
     Logistic_Regression = LogisticRegression()
     Logistic_Regression.fit(X_train, y_train)
     global LRfilename
-    LRfilename = 'Logistic_Regression_model.pkl'  # .sav?
+    LRfilename = 'Logistic_Regression_model.pkl' 
     pickle.dump(Logistic_Regression, open(LRfilename, 'wb'))
     # y=Logistic_Regression.predict(X)
     # if y==0 :return "Logistic_Regression: NO"
@@ -108,24 +108,27 @@ def predictResult(X):
     loaded_model = pickle.load(open(DTfilename, 'rb'))
     result1 = loaded_model.predict(X)
     if result1 == 1:
-        ans1 = 'Yes'
+        ans1 = 'YES'
     else:
-        ans1 = 'No'
+        ans1 = 'NO'
     # print(result1) #loaded_model.score(X_test, Y_test)
     loaded_model = pickle.load(open(GBfilename, 'rb'))
     result2 = loaded_model.predict(X)
     if result2 == 1:
-        ans2 = 'Yes'
+        ans2 = 'YES'
     else:
-        ans2 = 'No'
+        ans2 = 'NO'
     # print(result2)
     loaded_model = pickle.load(open(LRfilename, 'rb'))
     result3 = loaded_model.predict(X)
     if result3 == 1:
-        ans3 = 'Yes'
+        ans3 = 'YES'
     else:
-        ans3 = 'No'
-    return f"DecisionTree Prediction is:  {ans1}  AND   Naivebayes Prediction is: {ans2}   AND   Logistic Regression is :{ans3}"
+        ans3 = 'NO'
+
+    returnButton = '<br><div class="form-group"><button onclick="history.back()">Go Back</button></div>'
+
+    return f"<h2>DecisionTree Prediction is:  {ans1}  -----------   Naivebayes Prediction is: {ans2}   -----------   Logistic Regression is :{ans3}</h2>"+returnButton
 
 
 # adding training part
