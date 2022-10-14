@@ -1,15 +1,38 @@
-<!DOCTYPE html>  
-<html lang="en">   
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <title> WDE</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">  
-  <link rel="stylesheet" href="https://m...content-available-to-author-only...n.com/bootstrap/3.3.6/css/bootstrap.min.css">  
-</head>  
-<body>  
-  <div class="container">  
-  
-      <form action="{{ url_for("gfg")}}" method="post">
-        
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> WDE Project </title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <style>
+    fieldset {
+      background-color: #eeeeee;
+    }
+
+    legend {
+      background-color: gray;
+      color: white;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container" id="contact_form">
+    <br>
+    <h2>This WDE Project had been made by: </h2><br>
+    <h4>Mahmoud Karah Damour ---> Id: Mahmoud_152069 </h4>
+    <h4>Nebras Kabartay ---> Id Number:Nebras_207162</h4>
+    <h4>Roua Baston ---> Id: Roua_207709</h4>
+    <br>
+    <form name="contact" action="/" method="post" id="todo-form">
+      <fieldset>
+        <legend>Borrower Information :</legend>
         <div class="form-group">
           <label for="gender">Gender:</label>
           <select id="gender" name="Gender">
@@ -26,63 +49,57 @@
         </div>
         <div class="form-group">
           <label for="dependents">Dependents:</label>
-              <select  id="dependents" name="Dependents" >
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">+3</option>
-              </select>
+          <input type="number" id="dependents" name="Dependents" min="0" max="500000000" required>
         </div>
         <div class="form-group">
           <label for="education">Education:</label>
-          <select  id="education" name="Education" >
-            <option value="1">Yes</option>
-            <option value="0">No</option>
+          <select id="education" name="Education">
+            <option value="1">Graduated</option>
+            <option value="0">Not Graduated</option>
           </select>
         </div>
         <div class="form-group">
           <label for="employed_self">Employed_Self:</label>
           <select id="employed_self" name="Employed_Self">
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="applicantIncome">ApplicantIncome:</label>
-          <input type="text" id="applicantIncome" name="ApplicantIncome" >
+          <input type="number" id="applicantIncome" name="ApplicantIncome" min="0" max="500000000" required>
         </div>
-  
+
         <div class="form-group">
           <label for="coapplicantIncome">CoapplicantIncome:</label>
-          <input type="text" id="coapplicantIncome" name="CoapplicantIncome">
-  
+          <input type="number" id="coapplicantIncome" name="CoapplicantIncome" min="0" max="500000000" required>
+
         </div>
         <div class="form-group">
           <label for="loanAmount">LoanAmount:</label>
-          <input type="text" id="loanAmount" name="LoanAmount" >
-  
+          <input type="number" id="loanAmount" name="LoanAmount" min="0" max="500000000" required>
+
         </div>
         <div class="form-group">
           <label for="loan_Amount_Term">Loan_Amount_Term:</label>
-          <input type="text" id="loan_Amount_Term" name="Loan_Amount_Term" >
-  
+          <input type="number" id="loan_Amount_Term" name="Loan_Amount_Term" min="0" max="500000000" required>
+
         </div>
         <div class="form-group">
           <label for="history_Credit">History_Credit:</label>
-        <input type="text" id="history_Credit" name="History_Credit" >
-  
+          <input type="number" id="history_Credit" name="History_Credit" min="0" max="500000000" required>
         </div>
+
         <div class="form-group">
-          <button type="submit">Login</button>
+          <input type="submit" value="Submit">
         </div>
-  
-      </form>
-      
-  </div>  
-    
-    <script src="https://a...content-available-to-author-only...s.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
-    <script src="https://m...content-available-to-author-only...n.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-  </body>  
-</html>  
 
 
+      </fieldset>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
